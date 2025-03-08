@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: large;
+}
+
+:root {
+  --text-color: rgb(238, 238, 238);
+  --link-color: rgb(128, 128, 235);
+  --h2-color: rgb(95, 93, 93);
+  --view-height: 100vh;
+  --view-width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  column-gap: 1vw;
+  margin: 0;
+}
+
+button {
+  border: 1px black solid;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: large;
+}
+
+a> button:active {
+  background-color: rgb(58, 58, 58);
+}
+
+i {
+  font-size: 1.5em;
+  color: black;
+}
+
+i:hover {
+  color: rgb(212, 212, 212);
+}
+
+input {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid black;
+  /* height: 5vh; */
+  width: 100%;
+  box-sizing: border-box;
+  font-size: large;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.nav {
+  width: 100%;
+  height: 13vh;
+  color: var(--text-color);
+  background-color: rgb(34, 34, 34);
+}
+
+.nav-container {
+  width: 98vw;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: 13vh;
+}
+
+.logo-header{
+    display: flex; 
+    align-items: center
+}
+
+#logo {
+  height: 13vh;
+}
+
+.sign-up-form {
+  width: 100vw;
+  height: calc(100vh - 13vh);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 40vw;
+  grid-auto-flow: row;
+}
+
+.sign-up-form fieldset {
+  border-radius: 10px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+legend{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h2 {
+  color: var(--h2-color);
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.submit {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.submit button {
+  background-color: rgb(34, 34, 34);
+  color: var(--text-color);
+}
+
+/* Media Query */
+
+@media screen and (max-width: 790px) {
+  .sign-up-form {
+    grid-template-columns: 60vw;
+    grid-auto-flow: row;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .sign-up-form {
+    grid-template-columns: 90vw;
+    grid-auto-flow: row;
+  }
+
+  #logo {
+    height: 10vh;
+  }
+
+  .nav {
+    width: 100%;
+    height: 10vh;
+  }
+
+  .nav-container{
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .sign-up-form {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+}
